@@ -21,10 +21,13 @@ import {useState} from 'react';
 
 const Product = props => {
   const [liked, setLiked] = useState(false);
+  const [selectedText, setSelectedText] = useState('');
 
-  const handlePress = () => {
+  const handlePress = text => {
     setLiked(!liked);
+    setSelectedText(text);
   };
+
   return (
     <SafeAreaView style={{backgroundColor: '#191919', height: winHeight}}>
       <View>
@@ -33,7 +36,7 @@ const Product = props => {
 
         <View
           style={{
-            height: winHeight * 0.1,
+            height: winHeight * 0.2,
             width: winWidth * 0.9,
             alignContent: 'center',
             alignSelf: 'center',
@@ -96,9 +99,51 @@ const Product = props => {
             </Text>
           </View>
         </View>
-        <View>
-          <Text>Size</Text>
+        <View
+          style={{
+            flexDirection: 'row',
+            width: winWidth * 0.6,
+            justifyContent: 'space-between',
+            marginLeft: winWidth * 0.04,
+          }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: winWidth * 0.04,
+              fontWeight: '500',
+            }}>
+            Size
+          </Text>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: winWidth * 0.04,
+              textDecorationLine: 'underline',
+            }}>
+            US
+          </Text>
+          <Text
+            style={{color: 'white', fontSize: winWidth * 0.04}}
+            onPress={() => handlePress('EU')}>
+            EU
+          </Text>
+          <Text
+            style={{color: 'white', fontSize: winWidth * 0.04}}
+            onPress={() => handlePress('UK')}>
+            UK
+          </Text>
+          <Text style={{color: 'white', fontSize: winWidth * 0.04}}>Color</Text>
         </View>
+
+        <View
+          style={{
+            height: winWidth * 0.13,
+            width: winWidth * 0.35,
+            backgroundColor: 'white',
+            borderRadius: winWidth * 0.07,
+          }}>
+            
+          </View>
       </View>
     </SafeAreaView>
   );
