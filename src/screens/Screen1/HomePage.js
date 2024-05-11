@@ -17,9 +17,8 @@ import {logo} from '../../assets/images/index';
 import styles from './styles';
 import {RouterNames} from '../../config';
 
-
 const HomePage = props => {
-  const { navigation} = props;
+  const {navigation} = props;
 
   return (
     <SafeAreaView style={{backgroundColor: '#191919', height: winHeight}}>
@@ -29,7 +28,6 @@ const HomePage = props => {
           <View style={{paddingTop: winWidth * 0.05}}>
             <FlatList0 />
             <Line />
-
             <View style={styles.new_arrivals}>
               <View>
                 <Text style={{color: 'white', fontSize: winWidth * 0.05}}>

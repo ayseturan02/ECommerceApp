@@ -4,16 +4,13 @@ import {
   View,
   Dimensions,
   Image,
-  LayoutAnimation,
 } from 'react-native';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import NowButton from '../NowButton/NowButton';
 const winWidth = Dimensions.get('window').width;
 const winHeight = Dimensions.get('window').height;
 import styles from './styles';
-import { RouterNames } from '../../config';
-
-
+import {RouterNames} from '../../config';
 
 const FlatList1 = props => {
   const navigation = useState;
@@ -41,7 +38,10 @@ const FlatList1 = props => {
               <Text style={styles.price}>AED {price}</Text>
             </View>
             <View>
-              <NowButton title='Sign In' onPress={()=>navigation.navigate(RouterNames.MENU)} />
+              <NowButton
+                title="Sign In"
+                onPress={() => navigation.navigate(RouterNames.MENU)}
+              />
             </View>
           </View>
           <View style={styles.image}>

@@ -10,8 +10,16 @@ import ProductsFlatLİst from './FlatList1/ProductsFlatLİst';
 import Header3 from './Header3/Header3';
 import Button3 from './Button3/Button3';
 import ModalComp from './ModalComp/ModalComp';
+import Counter from './Counter/Counter';
+import Hearts from './Hearts/Hearts';
+import Product1 from './Product1/Product1';
+import Color1 from './Color1/Color1';
 
 export {
+  Color1,
+  Product1,
+  Hearts,
+  Counter,
   ModalComp,
   Button3,
   ProductsFlatLİst,

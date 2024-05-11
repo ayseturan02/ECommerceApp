@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './styles';
 import {RouterNames} from '../../config';
 import {useNavigation} from '@react-navigation/native';
+import {Hearts} from './../../components/index';
 const Stack = createNativeStackNavigator();
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -18,7 +19,8 @@ const FlatList5 = props => {
         </View>
       </View>
       <View style={styles.text_position}>
-        <TouchableOpacity
+       <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+       <TouchableOpacity
           title={title}
           onPress={() =>
             navigation.navigate(RouterNames.PRODUCT, {
@@ -30,6 +32,8 @@ const FlatList5 = props => {
           }>
           <Text style={styles.title_style}>{title}</Text>
         </TouchableOpacity>
+        < Hearts />
+       </View>
         <Text style={styles.price_style}>AED {price}</Text>
       </View>
     </View>

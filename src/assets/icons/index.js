@@ -8,8 +8,10 @@ const home = require('./home.png');
 const minusSign = require('./minusSign.png');
 const categories = require('./categories.png');
 const camera = require('./camera.png');
+const heart1=require('./heart1.png')
 
 export {
+  heart1,
   add,
   back,
   search,
