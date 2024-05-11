@@ -72,7 +72,6 @@ const FlatList0 = () => {
       photo={data.image}
       price={data.price}
       title={data.title}
-      line={data.id}
     />
   );
 };

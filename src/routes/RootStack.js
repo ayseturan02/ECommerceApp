@@ -7,7 +7,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 export default RootStack = () => {
   return (
     <Stack.Navigator
-      initialRouteName={RouterNames.PRODUCT}
+      initialRouteName={RouterNames.HOMEPAGE}
       screenOptions={{headerShown: false}}
       >
       <Stack.Screen name={RouterNames.HOMEPAGE} component={HomePage} />

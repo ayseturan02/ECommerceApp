@@ -217,7 +217,7 @@ const ProductsFlatLİst = () => {
       flashScrollIndicators={true}
       keyExtractor={item => item.id}
       renderItem={({item}) => (
-        <FlatList5 photo={item.image} title={item.title} price={item.price} />
+        <FlatList5 photo={item.image} title={item.title} price={item.price} description={item.description} />
       )}
     />
   );
