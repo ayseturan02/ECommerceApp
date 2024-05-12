@@ -23,6 +23,7 @@ const ModalComp = props => {
 
   const {title} = props;
   return (
+
     <Modal
       animationType="slide"
       visible={modalVisible}
@@ -56,8 +57,8 @@ const ModalComp = props => {
                 style={{
                   flexDirection: 'row',
                 }}>
-                <Text>{}</Text>
-                <Counter />
+                  <Text>{}</Text>
+              <Counter />
               </View>
             </View>
           </View>
