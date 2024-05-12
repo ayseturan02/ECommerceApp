@@ -208,9 +208,7 @@ const DATA = [
   },
 ];
 
-const FlatList0 = props => {
-  const {id} = props;
-  
+const FlatList0 = props => {  
   return (
     <FlatList
       data={DATA}

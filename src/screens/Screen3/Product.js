@@ -25,6 +25,12 @@ import styles from './styles';
 
 const Product = ({route, navigation}) => {
   const {title, description, image, price} = route.params;
+  const info ={
+      image:image,
+      title:title,
+      description:description,
+      price:price
+  };
 
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -43,29 +49,12 @@ const Product = ({route, navigation}) => {
           alignContent: 'center',
         }}>
         <Counter />
-        <TouchableOpacity
-      style={{
-        height: winWidth * 0.13,
-        width: winWidth * 0.35,
-        backgroundColor: 'white',
-        borderRadius: winWidth * 0.07,
-      }}
-      onPress={() => setModalVisible(!modalVisible)}>
-      <Text
-        style={{
-          alignSelf: 'center',
-          color: 'black',
-          fontSize: winWidth * 0.05,
-          fontWeight: '600',
-          top: winWidth * 0.023,
-        }}>
-        Add to Cart
-      </Text>
-    </TouchableOpacity>
+        <Button3 onPressFunc={() => setModalVisible(!modalVisible)}/>
 
         <ModalComp
           modalVisible={modalVisible}
           setModalVisible={setModalVisible}
+          info={info}
         />
       </View>
     </SafeAreaView>

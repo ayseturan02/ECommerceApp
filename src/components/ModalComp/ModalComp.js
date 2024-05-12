@@ -12,18 +12,13 @@ import styles from './styles';
 const winWidth = Dimensions.get('window').width;
 const winHeight = Dimensions.get('window').height;
 import {useState} from 'react';
-import {logo} from './../../assets/images/index';
-import {heart, minusSign, add} from './../../assets/icons/index';
 import Counter from '../Counter/Counter';
 
 const ModalComp = props => {
+  const {image, title, price, counter, info} = props;
   const {navigation, route} = props;
-
   const {modalVisible, setModalVisible} = props;
-
-  const {title} = props;
   return (
-
     <Modal
       animationType="slide"
       visible={modalVisible}
@@ -40,28 +35,56 @@ const ModalComp = props => {
           }}>
           <View style={{margin: winWidth * 0.07, flexDirection: 'row'}}>
             <Image
-              source={logo}
-              style={{height: winWidth * 0.2, width: winWidth * 0.2}}
+              source={{uri: info.image}}
+              style={{height: winWidth * 0.3, width: winWidth * 0.3}}
             />
-            <Text>sjfsjfjsk</Text>
+            <View style={{width: winWidth * 0.3}}>
+              <Text
+                style={{
+                  fontSize: winWidth * 0.04,
+                  color: 'black',
+                  fontWeight: '600',
+                }}>
+                {info.title}
+              </Text>
+            </View>
 
             <View
               style={{
                 alignItems: 'center',
                 justifyContent: 'center',
                 alignContent: 'flex-end',
-                width: winWidth * 0.8,
+                alignSelf: 'flex-end',
+                right: winWidth * 0.06,
               }}>
-              <Text></Text>
               <View
                 style={{
                   flexDirection: 'row',
                 }}>
-                  <Text>{}</Text>
-              <Counter />
+                <Text style={{fontSize: winWidth * 0.05}}> {info.price}</Text>
               </View>
+              <Counter />
             </View>
           </View>
+          <TouchableOpacity
+            style={{
+              justifyContent: 'flex-end',
+              width: winWidth * 0.86,
+              alignContent: 'flex-end',
+              alignItems: 'flex-end',
+            }}
+            onPress={() => setModalVisible(false)}>
+            <View
+              style={{
+                height: winWidth * 0.1,
+                width: winWidth * 0.2,
+                backgroundColor: 'black',
+              }}>
+              <View style={{padding: winWidth * 0.02, left: winWidth * 0.02}}>
+                <Text style={{color: 'white'}}>tmmdır</Text>
+              </View>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     </Modal>

@@ -27,7 +27,9 @@ const HomePage = props => {
           <Header1 Logo={logo} />
           <View style={{paddingTop: winWidth * 0.05}}>
             <FlatList0 />
+
             <Line />
+
             <View style={styles.new_arrivals}>
               <View>
                 <Text style={{color: 'white', fontSize: winWidth * 0.05}}>

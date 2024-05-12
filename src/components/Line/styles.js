@@ -6,17 +6,14 @@ const winHeight = Dimensions.get('window').height;
 export default styles = StyleSheet.create({
   line_position: {
     flexDirection: 'row',
-    height: winHeight * 0.2,
-    justifyContent: 'space-between',
-    alignSelf: 'center',
+    justifyContent: 'center',
     alignItems: 'center',
-    width: winWidth * 0.65,
-    
+    marginTop:winWidth*0.03,
   },
   line: {
-    height: winWidth * 0.01,
     width: winWidth * 0.08,
-    backgroundColor: 'white',
-    borderRadius: winWidth * 0.01,
+    height: winWidth * 0.01,
+    marginHorizontal: winWidth * 0.01,
+    backgroundColor: 'gray',
   },
 });
